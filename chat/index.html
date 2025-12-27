@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realtime Chat</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header class="appbar">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="title">Realtime Chat</div>
+          </div>
+        </div>
+
+        <div class="toolbar" role="toolbar" aria-label="Chat controls">
+          <label class="sr-only" for="roomInput">Room ID</label>
+          <input id="roomInput" class="input" type="text" placeholder="Room ID" aria-label="Room ID">
+          <button id="goBtn" class="button ghost">Go</button>
+          <button id="shareBtn" class="button ghost" title="Copy link" aria-label="Copy link">Share</button>
+          <div style="width:8px"></div>
+          <label class="sr-only" for="nameInput">Your name</label>
+          <input id="nameInput" class="input" type="text" placeholder="Your name" aria-label="Your name">
+          <button id="saveNameBtn" class="button">Save</button>
+        </div>
+      </header>
+
+      <div class="layout">
+        <main class="chat-area" aria-label="Chat">
+          <div class="chat-log" id="chatlog" role="log" aria-live="polite"></div>
+
+          <div class="composer">
+            <input id="msgInput" type="text" placeholder="Write a message..." aria-label="Message" />
+            <button id="sendBtn" class="button">Send</button>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <div class="panel">
+            <div class="label">Room</div>
+            <div id="roomLabel" style="font-weight:700;font-size:15px;margin-top:6px">room</div>
+            <div class="muted" style="margin-top:8px">Share this room to invite people.</div>
+          </div>
+
+          <div class="panel">
+            <div class="label">Presence</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+              <div class="muted">Online</div>
+              <div id="online" class="online">0</div>
+            </div>
+            <div class="muted" style="margin-top:8px;font-size:13px">Last seen updates every 5s.</div>
+          </div>
+
+          <div class="panel">
+            <div class="label">Tips</div>
+            <ul style="margin:8px 0 0 16px;color:var(--muted);font-size:13px;line-height:1.5">
+              <li>Set a display name for clarity.</li>
+              <li>Use a short room name for easy sharing.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
