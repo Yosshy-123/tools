@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>メモ</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>メモ</h1>
+    </header>
+
+    <div class="app">
+      <aside class="panel">
+        <div class="controls">
+          <button id="newBtn" class="btn">新規</button>
+          <input id="search" type="text" placeholder="検索" />
+        </div>
+        <div id="list" class="list"></div>
+      </aside>
+
+      <main class="panel">
+        <input id="title" type="text" placeholder="タイトル" />
+        <div style="height:8px"></div>
+        <textarea id="body" placeholder="メモ"></textarea>
+        <div>
+          <button id="saveBtn" class="btn">保存</button>
+          <button id="deleteBtn" class="ghost">削除</button>
+          <button id="exportBtn" class="ghost">エクスポート</button>
+          <button id="importBtn" class="ghost">インポート</button>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
