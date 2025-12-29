@@ -56,11 +56,6 @@ h1 {
 }
 
 .tools a {
-	text-decoration: none;
-	outline: none;
-}
-
-.tools a>h2 {
 	margin: 0;
 	padding: 28px 20px;
 	height: 100%;
@@ -80,15 +75,15 @@ h1 {
 	border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.tools a:hover h2,
-.tools a:focus h2 {
+.tools a:hover,
+.tools a:focus {
 	transform: translateY(-6px) scale(1.01);
 	box-shadow: 0 16px 40px rgba(12, 22, 48, 0.6), 0 2px 6px rgba(124, 58, 237, 0.12);
 	background: linear-gradient(135deg, rgba(96, 165, 250, 0.08), rgba(124, 58, 237, 0.06));
 	border-color: rgba(96, 165, 250, 0.18);
 }
 
-.tools a:focus-visible h2 {
+.tools a:focus-visible {
 	box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.14), 0 12px 30px rgba(2, 6, 23, 0.5);
 }
 
@@ -99,7 +94,7 @@ h1 {
 }
 
 @media(min-width:900px) {
-	.tools a>h2 {
+	.tools a {
 		padding: 36px 24px;
 		font-size: 1.25rem;
 	}
@@ -118,15 +113,15 @@ h1 {
 		gap: 14px
 	}
 
-	.tools a>h2 {
+	.tools a {
 		padding: 18px
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
 
-	.tools a>h2,
-	.tools a:hover h2 {
+	.tools a,
+	.tools a:hover {
 		transition: none;
 		transform: none;
 	}
