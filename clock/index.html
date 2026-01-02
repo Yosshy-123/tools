@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>デジタル時計</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="center">
+    <section class="clock-card" aria-label="デジタル時計">
+      <div class="clock" role="timer" aria-live="polite">
+        <time id="time" datetime=""></time>
+      </div>
+      <div id="date" class="date" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
