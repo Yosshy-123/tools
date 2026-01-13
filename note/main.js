@@ -1,5 +1,5 @@
-const DB_NAME = 'MemoDB';
-const STORE = 'memos';
+const DB_NAME = 'NoteDB';
+const STORE = 'notes';
 
 function openDB() {
 	return new Promise((res, rej) => {
@@ -180,7 +180,7 @@ exportBtn.onclick = async () => {
 	const data = await all();
 	const pad = (n) => String(n).padStart(2, '0');
 	const now = new Date();
-	const filename = `memos_${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}_${pad(now.getHours())}.${pad(now.getMinutes())}.${pad(now.getSeconds())}.json`;
+	const filename = `notes_${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}_${pad(now.getHours())}.${pad(now.getMinutes())}.${pad(now.getSeconds())}.json`;
 	const blob = new Blob([JSON.stringify(data, null, 2)], {
 		type: 'application/json'
 	});
@@ -218,8 +218,8 @@ document.getElementById("importBtn").addEventListener("click", () => {
 		let items;
 		if (Array.isArray(parsed)) {
 			items = parsed;
-		} else if (parsed && Array.isArray(parsed.memos)) {
-			items = parsed.memos;
+		} else if (parsed && Array.isArray(parsed.notes)) {
+			items = parsed.notes;
 		} else {
 			alert("Import failed");
 			return;
